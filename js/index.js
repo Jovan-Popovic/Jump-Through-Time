@@ -31,7 +31,7 @@ let colision = false;
 function detectColision(){
     for(let i=0;i<brickNumber;i++){
         if(character.x > brickPosition[i][0] && character.x < brickPosition[i][0] + brickWidth 
-        && character.y +size> brickPosition[i][1] && character.y + size< brickPosition[i][1] + brickHeight){
+        && character.y + size>  brickPosition[i][1] && character.y + size< brickPosition[i][1] + brickHeight){
         colision = true; 
         moves=0;
         }
@@ -100,12 +100,6 @@ function drawBrick(){
     ctx.fill();
     ctx.closePath();
     }
-    //Draw portal for winning-Need improvment!!!!
-    ctx.beginPath();
-    ctx.rect(canvas.width/2 - 35 , 60 , 70, 150);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
 }
 
 //Main function
